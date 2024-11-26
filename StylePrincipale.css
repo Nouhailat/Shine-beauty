@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Navbar */
@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: transparent; /* Fond transparent */
+    background-color: rgba(11, 10, 10, 0.1);
     padding: 5px 20px;  /* Réduit le padding vertical pour diminuer la hauteur */
     color: #800000; /* BORDO */
     position: fixed; /* Fixé en haut de la page */
@@ -27,8 +28,10 @@ body {
 
 /* Logo */
 .logo img {
-    height: 160px; /* Garde la taille initiale du logo */
+    height: 270px; /* Garde la taille initiale du logo */
     width: auto;
+    /* padding-left: -10px; */
+    margin-right: 80px;
 }
 
 /* Liens de navigation */
@@ -208,6 +211,7 @@ body {
 .card {
     background-color: #fff;
     width: 400px;
+
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -223,7 +227,7 @@ body {
 /* Image de la carte */
 .card-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover; /* Garde l'image bien dimensionnée */
 }
 
@@ -313,5 +317,266 @@ body {
 .card:nth-child(3) {
     animation-delay: 0.6s;
 }
+/* le style dyal lformulaire */
+.form-section {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Conteneur principal pour le formulaire */
+.custom-form-section {
+    background-color: #f9f9f9; /* Fond clair */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto; /* Centrer horizontalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
 
+/* Titre du formulaire */
+.custom-form-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style des groupes de champs */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style des étiquettes */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Style des champs de saisie */
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Effet focus sur les champs de saisie */
+.form-group input:focus {
+    border-color: #ff6f61; /* Couleur de focus */
+}
+
+/* Bouton de soumission */
+.submit-button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #ff6f61; /* Couleur principale */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet hover pour le bouton */
+.submit-button:hover {
+    background-color: #e05a50;
+}
+
+/* Centrer le formulaire */
+.text-center {
+    text-align: center;
+}
+
+/* Marges pour les titres */
+.my-4 {
+    margin: 20px 0;
+}
+/* css dyl table li kitrad les cmd li dazo */
+#orders {
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre portée */
+    background-color: #ffffff; /* Fond blanc pour une meilleure lisibilité */
+}
+
+.order-table th, .order-table td {
+    padding: 14px 20px; /* Plus de padding pour une meilleure lisibilité */
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px; /* Taille de police confortable */
+}
+
+.order-table th {
+    background-color: #f17f7f; /* Couleur de fond verte pour les entêtes */
+    color: #fff; /* Texte blanc pour les entêtes */
+    font-weight: bold;
+}
+
+.order-table tr:nth-child(even) {
+    background-color: #f4f4f4; /* Lignes paires avec un fond gris clair */
+}
+
+.order-table tr:nth-child(odd) {
+    background-color: #fff; /* Lignes impaires avec fond blanc */
+}
+
+.order-table tr:hover {
+    background-color: #f1f1f1; /* Survol d'une ligne avec un fond gris clair */
+    cursor: pointer; /* Change le curseur en main lors du survol */
+}
+
+.order-table td {
+    font-weight: normal; /* Réduit le poids de la police pour un texte plus léger */
+}
+
+.order-table th, .order-table td {
+    text-align: center; /* Centrer le texte dans les cellules */
+}
+
+.order-table .orderId {
+    font-weight: bold; /* ID Commande avec un texte en gras */
+}
+
+#orders h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .order-table {
+        font-size: 14px; /* Ajuste la taille de la police sur les petits écrans */
+    }
+
+    .order-table th, .order-table td {
+        padding: 10px; /* Réduit le padding sur les petits écrans */
+    }
+}
+/* Style du footer */
+footer {
+    background-color: #333; /* Fond sombre */
+    color: #f2f2f2; /* Texte en blanc */
+    padding: 30px 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenu du footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Partie gauche du footer (logo et infos) */
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo {
+    max-width: 150px; /* Taille du logo */
+    margin-bottom: 10px;
+}
+
+/* Partie centrale du footer (carte et contact) */
+.footer-center {
+    flex: 1;
+    text-align: center;
+}
+
+.map-link {
+    color: #4CAF50; /* Couleur verte pour la carte */
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: #1a73e8; /* Couleur bleue lors du survol */
+}
+
+/* Partie droite du footer (réseaux sociaux) */
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer-right .social-icon {
+    font-size: 22px;
+    color: #f2f2f2;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-right .social-icon:hover {
+    color: #af5c4c; /* Effet de changement de couleur au survol */
+    transform: scale(1.2); /* Agrandissement des icônes */
+}
+
+.footer-right .social-icon i {
+    transition: transform 0.3s ease;
+}
+
+.footer-right .social-icon:hover i {
+    transform: rotate(360deg); /* Rotation des icônes au survol */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-bottom: 20px;
+    }
+
+    .footer-center {
+        margin-bottom: 20px;
+    }
+
+    .footer-right ul {
+        justify-content: center;
+    }
+
+    .footer-right li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
 
