@@ -475,10 +475,13 @@ html {
 }
 /* Style du footer */
 footer {
-    background-color: #333; /* Fond sombre */
-    color: #f2f2f2; /* Texte en blanc */
+    background-color: #d4a8a8; /* Fond sombre */
+    color: #4d1a1a; /* Texte en blanc */
     padding: 30px 20px;
     font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -500,8 +503,9 @@ footer {
 }
 
 .footer-logo {
-    max-width: 150px; /* Taille du logo */
+    max-width: 200px; /* Taille du logo */
     margin-bottom: 10px;
+
 }
 
 /* Partie centrale du footer (carte et contact) */
@@ -511,7 +515,7 @@ footer {
 }
 
 .map-link {
-    color: #4CAF50; /* Couleur verte pour la carte */
+    color: #afac4c; /* Couleur verte pour la carte */
     font-size: 18px;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -537,7 +541,7 @@ footer {
 }
 
 .footer-right .social-icon {
-    font-size: 22px;
+    font-size: 40px;
     color: #f2f2f2;
     transition: transform 0.3s ease, color 0.3s ease;
 }
