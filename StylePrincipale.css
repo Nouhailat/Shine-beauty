@@ -1,0 +1,317 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('backg.png'); /* Assurez-vous que l'image de fond est correctement définie */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Fond transparent */
+    padding: 5px 20px;  /* Réduit le padding vertical pour diminuer la hauteur */
+    color: #800000; /* BORDO */
+    position: fixed; /* Fixé en haut de la page */
+    width: 100%; /* Largeur pleine */
+    margin: 0 auto; /* Centrer la navbar */
+    z-index: 1000; /* Toujours au-dessus */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    height: 80px; /* Limite la hauteur de la navbar */
+}
+
+/* Logo */
+.logo img {
+    height: 160px; /* Garde la taille initiale du logo */
+    width: auto;
+}
+
+/* Liens de navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #800000; /* BORDO */
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #230a0a; /* Rouge bordeaux */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Icônes sociales et panier */
+.nav-icons {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+    align-items: center; /* Aligne les icônes verticalement */
+}
+
+.nav-icons .icon {
+    color: #800000; /* Rouge bordeaux */
+    font-size: 1.8rem; /* Taille des icônes */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-icons .icon:hover {
+    color: #800000; /* Rouge bordeaux */
+}
+
+/* Menu toggle pour mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #800000; /* Doré */
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Styles pour le mobile */
+@media (max-width: 768px) {
+    /* Affichage du menu toggle */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(128, 0, 0, 0.9); /* Fond bordeaux semi-transparent */
+        position: absolute;
+        top: 80px; /* Ajusté pour le logo */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .nav-icons .icon {
+        font-size: 1.5rem; /* Taille réduite des icônes en mobile */
+    }
+}
+
+/* Section avec image de fond */
+.background-section {
+    background-image: url('backg.png'); /* Assurez-vous que l'image de fond est correctement définie */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Hauteur de la section (plein écran) */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    text-align: left; /* Aligne le texte à gauche */
+    padding-left: 20px; /* Décale légèrement le texte vers la gauche */
+}
+
+/* Titre principal (h1) */
+.background-section h1 {
+    font-family: 'Amsterdam Four', sans-serif; /* Applique la police */
+    font-size: 5rem; /* Taille de la police */
+    color: #030303; /* Couleur sombre */
+    margin: 0;
+    margin-right: 800px;
+    padding-bottom: 60px;
+    font-weight: bold; /* Rendre le texte plus visible */
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+    overflow: hidden; /* Cache le texte pendant l'animation */
+    width: 0; /* Commence avec une largeur de 0 pour l'animation */
+    animation: typing 2s steps(30) forwards; /* Animation d'écriture */
+}
+
+/* Animation d'écriture */
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+/* Titre secondaire (h2) */
+.background-section h3 {
+    font-family: 'Amsterdam Four', sans-serif;
+    font-size: 4rem;
+    color: #030303; /* Couleur sombre */
+    margin: 0;
+    margin-right: 600px;
+    padding-bottom: 110px;
+    font-weight: bold; /* Rendre le texte plus visible */
+}
+
+/* Sous-titre (h3) */
+.background-section h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Applique la police */
+    font-size: 3rem; /* Taille du sous-titre */
+    color: #131312; /* Couleur sombre */
+    margin-top: 10px;
+    margin-left: 100px;
+    font-weight: bold; /* Rendre le texte plus visible */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(20) forwards;
+}
+/* hadi style dyl card li fihom make u */
+/* Section des cartes */
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative; /* Pour éviter qu'elles ne soient affectées par d'autres éléments */
+    background-color: white; /* Fond blanc pour les cartes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Légère ombre portée */
+    border-radius: 10px; /* Coins arrondis pour un effet plus doux */
+    z-index: 2; /* Assure que la section des cartes sera au-dessus du fond */
+}
+
+/* Style général des cartes */
+.card {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Image de la carte */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garde l'image bien dimensionnée */
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-family: 'Amsterdam Four', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-availability {
+    font-size: 1.2rem;
+    color: #800000; /* Couleur rouge bordeaux */
+    font-weight: bold;
+}
+
+/* Animation d'apparition des cartes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation d'apparition aux cartes */
+.card {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+/* Animation de survol des cartes */
+/* .card:hover {
+    transform: scale(1.05) rotate(5deg); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+ /* Animation d'apparition des cartes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Déplace les cartes vers le bas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Les cartes reviennent à leur position normale */
+    }
+}
+
+/* Appliquer l'animation aux cartes */
+.card {
+    animation: fadeInUp 1s ease-out forwards; /* Délai de 1 seconde avec une fluidité douce */
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s; /* Délai pour un effet d'animation décalé */
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
