@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url('backg.png'); /* Assurez-vous que l'image de fond est correctement définie */
+    background-image: url('img/2.png'); /* Assurez-vous que l'image de fond est correctement définie */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -134,7 +134,7 @@ body {
 
 /* Section avec image de fond */
 .background-section {
-    background-image: url('backg.png'); /* Assurez-vous que l'image de fond est correctement définie */
+    background-image: url('img/backg.png'); /* Assurez-vous que l'image de fond est correctement définie */
     background-size: cover;
     background-position: center;
     height: 100vh; /* Hauteur de la section (plein écran) */
@@ -369,11 +369,26 @@ html {
     outline: none;
     transition: border-color 0.3s ease;
 }
+/* blaset lproduct dakhl dyl form  */
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+/* lblasa dyl ila makanch despo  */
+.text-line-through {
+    text-decoration: line-through;
+}
+
 
 /* Effet focus sur les champs de saisie */
 .form-group input:focus {
     border-color: #ff6f61; /* Couleur de focus */
 }
+
 
 /* Bouton de soumission */
 .submit-button {
@@ -404,35 +419,39 @@ html {
     margin: 20px 0;
 }
 /* css dyl table li kitrad les cmd li dazo */
-#orders {
+#order-table {
     padding: 20px;
     margin-top: 40px;
     font-family: 'Arial', sans-serif;
+    width: 100%; /* S'assurer que la table occupe toute la largeur disponible */
+    border-collapse: collapse; /* Fusion des bordures pour une meilleure apparence */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre portée */
+    background-color: #ffffff; /* Fond blanc pour les lignes */
 }
 
-.order-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre portée */
-    background-color: #ffffff; /* Fond blanc pour une meilleure lisibilité */
+.orders {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .order-table th, .order-table td {
     padding: 14px 20px; /* Plus de padding pour une meilleure lisibilité */
-    text-align: left;
+    text-align: left; /* Alignement du texte à gauche */
     border: 1px solid #ddd;
     font-size: 16px; /* Taille de police confortable */
 }
 
 .order-table th {
-    background-color: #f17f7f; /* Couleur de fond verte pour les entêtes */
+    background-color: #f17f7f; /* Couleur de fond rose pour les entêtes */
     color: #fff; /* Texte blanc pour les entêtes */
     font-weight: bold;
 }
 
 .order-table tr:nth-child(even) {
-    background-color: #f4f4f4; /* Lignes paires avec un fond gris clair */
+    background-color: #f4f4f4; /* Lignes paires avec fond gris clair */
 }
 
 .order-table tr:nth-child(odd) {
@@ -440,7 +459,7 @@ html {
 }
 
 .order-table tr:hover {
-    background-color: #f1f1f1; /* Survol d'une ligne avec un fond gris clair */
+    background-color: #f1f1f1; /* Survol d'une ligne avec fond gris clair */
     cursor: pointer; /* Change le curseur en main lors du survol */
 }
 
@@ -453,15 +472,7 @@ html {
 }
 
 .order-table .orderId {
-    font-weight: bold; /* ID Commande avec un texte en gras */
-}
-
-#orders h2 {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+    font-weight: bold; /* ID Commande avec texte en gras */
 }
 
 @media (max-width: 768px) {
@@ -473,6 +484,7 @@ html {
         padding: 10px; /* Réduit le padding sur les petits écrans */
     }
 }
+
 /* Style du footer */
 footer {
     background-color: #d4a8a8; /* Fond sombre */
@@ -490,7 +502,7 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -498,13 +510,16 @@ footer {
 
 /* Partie gauche du footer (logo et infos) */
 .footer-left {
-    flex: 1;
+    /* flex: 1; */
     text-align: left;
+    margin-left: auto;
 }
 
 .footer-logo {
-    max-width: 200px; /* Taille du logo */
-    margin-bottom: 10px;
+    max-width:190px; /* Taille du logo */
+    margin-bottom: 5px;
+    
+    
 
 }
 
@@ -516,7 +531,7 @@ footer {
 
 .map-link {
     color: #afac4c; /* Couleur verte pour la carte */
-    font-size: 18px;
+    font-size: 29px;
     text-decoration: none;
     transition: color 0.3s ease;
 }

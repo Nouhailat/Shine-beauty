@@ -14,7 +14,7 @@
     <nav class="navbar">
         <!-- Logo -->
         <div class="logo">
-          <img src="Black and Red Grunge Beauty Logo.png" alt="Logo">
+          <img src="img/Black and Red Grunge Beauty Logo.png" alt="Logo">
         </div>
     
         <!-- Menu  -->
@@ -57,7 +57,7 @@
     <section class="content-section">
         <div class="cards-section">
             <div class="card">
-                <img src="pngtree-liquid-foundation-makeup-beauty-splash-png-image_9099958.png" alt="Maquillage Classique" class="card-image">
+                <img src="img/pngtree-liquid-foundation-makeup-beauty-splash-png-image_9099958.png" alt="Maquillage Classique" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Fondation liquid </h3>
                     <p class="card-description">Un maquillage simple mais élégant, parfait pour tous les jours.</p>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="3348901527118_1_1.jpg" alt="Maquillage Glamour" class="card-image">
+                <img src="img/3348901527118_1_1.jpg" alt="Maquillage Glamour" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Lipstick red from Dior</h3>
                     <p class="card-description">Un look audacieux avec des couleurs vives et de l'éclat.</p>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="blush.png" alt="Maquillage Naturel" class="card-image">
+                <img src="img/blush.png" alt="Maquillage Naturel" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Blush pink</h3>
                     <p class="card-description">Un maquillage léger et frais pour une apparence naturelle.</p>
@@ -83,7 +83,7 @@
         </div>
         <div class="cards-section">
             <div class="card">
-                <img src="12216362431717667839.jpg" alt="Maquillage Classique" class="card-image">
+                <img src="img/12216362431717667839.jpg" alt="Maquillage Classique" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">maskara</h3>
                     <p class="card-description">Un maquillage simple mais élégant, parfait pour tous les jours.</p>
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="eyeliner.png" alt="Maquillage Glamour" class="card-image">
+                <img src="img/eyeliner.png" alt="Maquillage Glamour" class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">Eyeliner water proof</h3>
                     <p class="card-description">Un look audacieux avec des couleurs vives et de l'éclat.</p>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="eyeshadow.png"alt= Naturel class="card-image">
+                <img src="img/eyeshadow.png"alt= Naturel class="card-image">
                 <div class="card-content">
                     <h3 class="card-title">EyeShadow </h3>
                     <p class="card-description">Un maquillage léger et frais pour une apparence naturelle.</p>
@@ -114,6 +114,9 @@
         <h2 class="text-center my-4">Formulaire de Commande</h2>
         <div class="form-section">
             <form id="orderForm">
+                <!-- Prénom -->
+            
+                </div>
                 <div class="form-group">
                     <label for="firstName">Prénom</label>
                     <input type="text" id="firstName" placeholder="Entrez votre prénom" required>
@@ -132,55 +135,113 @@
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber">Numéro de Téléphone</label>
-                    <input type="tel" id="phoneNumber" placeholder="Entrez votre numéro de téléphone" required>
+                    <input type="tel" id="phoneNumber" placeholder="Entrez votre numéro de téléphone" required maxlength="10">
                 </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Entrez votre email" required>
+                </div>
+    
+                <!-- Produit -->
+                <div class="form-group">
+                    <label for="productName">Produit</label>
+                    <select 
+                        id="productName" 
+                        name="productName" 
+                        class="form-control" 
+                        required>
+                        <option value="" disabled selected>--Choisissez un produit--</option>
+                        <option value="Fondation liquid">Fondation liquid</option>
+                        <option value="Lipstick red from Dior">Lipstick red from Dior</option>
+                        <option value="Blush pink">Blush pink</option>
+                        <option value="Mascara">Mascara</option>
+                        <option value="Eyeliner water proof">Eyeliner water proof</option>
+                        <option value="EyeShadow">EyeShadow</option>
+                    </select>
+                </div>
+    
+                <!-- Prix Unitaire -->
+                <div class="form-group">
+                    <label for="unitPrice">Prix Unitaire (MAD)</label>
+                    <input 
+                        type="text" 
+                        id="unitPrice" 
+                        name="unitPrice" 
+                        class="form-control" 
+                        readonly>
+                </div>
+    
+                <!-- Quantité -->
                 <div class="form-group">
                     <label for="quantity">Quantité</label>
-                    <input type="number" id="quantity" placeholder="Entrez la quantité" min="1" required>
+                    <input 
+                        type="number" 
+                        id="quantity" 
+                        name="quantity" 
+                        class="form-control" 
+                        placeholder="Entrez la quantité" 
+                        min="1" 
+                        required>
                 </div>
+    
+                <!-- Prix Total -->
                 <div class="form-group">
                     <label for="totalPrice">Prix Total (MAD)</label>
-                    <input type="text" id="totalPrice" readonly>
+                    <input 
+                        type="text" 
+                        id="totalPrice" 
+                        name="totalPrice" 
+                        class="form-control" 
+                        readonly>
                 </div>
-                <button type="submit" class="submit-button">Finaliser la Commande</button>
+    
+                <!-- Bouton -->
+                <button 
+                    type="submit" 
+                    class="btn btn-primary btn-block submit-button">
+                    Finaliser la Commande
+                </button>
             </form>
         </div>
     </div>
+    
     <!-- liste dyl les cmd -->
-    <section id="orders">
-    <h2>Tableau des Commandes</h2>
-    <table class="order-table">
+    <h3 class="orders">Historique des Commandes</h3>
+    <table id="order-table" class="table">
         <thead>
             <tr>
-                <th>ID Commande</th>
-                <th>Nom Client</th>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Email</th>
                 <th>Produit</th>
                 <th>Quantité</th>
-                <th>Prix Unitaire (MAD)</th>
-                <th>Prix Total (MAD)</th>
-                <th>Date de Commande</th>
+                <th>Prix Unitaire</th>
+                <th>Prix Total</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody id="orderTableBody">
-            <!-- Les lignes de commandes seront ajoutées ici dynamiquement -->
+            <!-- Les lignes de commande seront ajoutées ici -->
         </tbody>
     </table>
+</div>
 </section>
 <footer>
     <div class="footer-content">
       <div class="footer-left">
-        <img src="Black and Red Grunge Beauty Logo.png" alt="Logo ChicHaven" class="footer-logo"> <!-- Remplacez path_to_logo.png par l'URL de votre logo -->
+        <img src="img/Black and Red Grunge Beauty Logo.png" alt="Logo ChicHaven" class="footer-logo"> <!-- Remplacez path_to_logo.png par l'URL de votre logo -->
         <p>&copy; 2024 ShineBeauty. Tous droits réservés.</p>
        
       </div>
       <div class="footer-center">
-        <p>Nous contacter :</p>
+        <p>Our Adresse :</p>
         <a href="https://maps.google.com/?q=123+Rue+de+l'Innovation,+Casablanca" target="_blank" class="map-link">
           <i class="fas fa-map-marker-alt"></i> Voir sur la carte
         </a>
       </div>
       <div class="footer-right">
         <ul>
+            <p>Follow Us</p>
           <li><a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a></li>
           <li><a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a></li>
